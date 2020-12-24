@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use Spatie\Permission\Models\Role;
 class UserController extends Controller
 {
     /**
@@ -25,7 +26,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.users.create');
+        $roles = Role::all();
+        return view('backend.pages.users.create',compact('roles'));
     }
 
     /**
@@ -44,6 +46,9 @@ class UserController extends Controller
         $input = $request->all();
         $input['password'] = bcrypt($input['password']);
         $user = User::create($input);
+        if ($request->role) {
+            $user->assignRole($request->role);
+        }
         return redirect('users')->with('success', 'User created successfully.');
     }
 
@@ -67,7 +72,8 @@ class UserController extends Controller
     public function edit($id)
     {
         $userdata = User::findOrFail($id);
-        return view('backend.pages.users.edit',compact('userdata'));
+        $roles = Role::all();
+        return view('backend.pages.users.edit',compact('userdata','roles'));
     }
 
     /**
@@ -81,12 +87,21 @@ class UserController extends Controller
     {
          $this->validate($request,[
             'name'=>'required',
-            'email'=>'required|unique:users,email,'.$id
+            'email'=>'required|unique:users,email,'.$id,
+            'password'=>'nullable|min:8|max:12'
 
         ]);
         $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->email = $request->email;
+        if ($request->password) {
+            bcrypt($request->password);
+        }
+        $user->roles()->detach();
+        if ($request->role) {
+            $user->assignRole($request->role);
+        }
         $user->save();
         return redirect('users')->with('success', 'User created successfully.');
     }
@@ -103,6 +118,7 @@ class UserController extends Controller
         if(!is_null($user)){
             $user->delete();
         }
-        return back()->with("message","You have deleted sucessfully.!"); 
+        session()->flash('success', 'User has been deleted !!');
+        return back(); 
     }
 }

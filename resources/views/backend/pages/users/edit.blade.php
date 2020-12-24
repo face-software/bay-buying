@@ -27,7 +27,19 @@
 		                    <span class="text-danger">{{ $errors->first('email') }}</span>
 		                @endif
 					  </div>
-					  
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Password</label>
+					    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password" value="" name="password">
+					  </div>
+					  <div class="form-group">
+					    	<label for="exampleInputPassword1">Assign Role</label>
+						   	<select class="form-control select2" name="role">
+					            <option value="cheese">Cheese one</option>
+					            @foreach($roles as $role)
+					            <option value="{{$role->name}}" {{$userdata->hasRole($role->name)?'selected':''}}>{{$role->name}}</option>
+					            @endforeach
+				        	</select>
+					  </div>
 					  <button type="submit" class="btn btn-primary">Save</button>
 					</form>
                 </div>

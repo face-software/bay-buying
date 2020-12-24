@@ -15,6 +15,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col" >Email</th>
+                        <th scope="col" >Permission</th>
                         <th scope="col">Action</th>
                         
                       </tr>
@@ -26,6 +27,11 @@
                         <td>{{$user->name}}</td>
                         <td>
                            {{$user->email}} 
+                        </td>
+                        <td>
+                           @foreach($user->roles as $role)
+                           {{$role->name}}
+                           @endforeach 
                         </td>
                         <td>
                           <a class="btn btn-success btn-sm" href="{{route('users.edit',$user->id)}}">Edit</a>
