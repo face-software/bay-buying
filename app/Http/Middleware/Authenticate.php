@@ -14,8 +14,14 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if (! $request->expectsJson()) {
-            return route('login');
+        if (Auth::gaurd('supplier') OR Auth::gaurd('buyer') OR Auth::gaurd('manufacturer') OR Auth::gaurd('buying')) {
+            if (! $request->expectsJson()) {
+                return route('user.login');
+            }
+        } else {
+            if (! $request->expectsJson()) {
+                return route('login');
+            }
         }
     }
 }

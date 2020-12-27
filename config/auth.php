@@ -40,10 +40,46 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'buyer' => [
+            'driver' => 'session',
+            'provider' => 'buyers',
+        ],
+        'supplier' => [
+            'driver' => 'session',
+            'provider' => 'suppliers',
+        ],
+        'manufacturer' => [
+            'driver' => 'session',
+            'provider' => 'manufacturers',
+        ],
+        'buying' => [
+            'driver' => 'session',
+            'provider' => 'buyings',
+        ],
 
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
+            'hash' => false,
+        ],
+        'buyer_api' => [
+            'driver' => 'token',
+            'provider' => 'buyers',
+            'hash' => false,
+        ],
+        'supplier_api' => [
+            'driver' => 'token',
+            'provider' => 'suppliers',
+            'hash' => false,
+        ],
+        'manufacturer_api' => [
+            'driver' => 'token',
+            'provider' => 'manufacturers',
+            'hash' => false,
+        ],
+        'buying_api' => [
+            'driver' => 'token',
+            'provider' => 'buyings',
             'hash' => false,
         ],
     ],
@@ -69,6 +105,22 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'buyers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Buyer::class,
+        ],
+        'suppliers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Supplier::class,
+        ],
+        'manufacturers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Manufacturer::class,
+        ],
+        'buyings' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Buying::class,
         ],
 
         // 'users' => [
