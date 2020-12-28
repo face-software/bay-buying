@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 });
 */
 Route::get('/','FrontendController@index')->name('home');
+Route::get('/buyer-registration','FrontendController@buyerForm')->name('buyer.reg');
+Route::get('/buying-registration','FrontendController@buyingHouseForm')->name('buying.reg');
+Route::get('/supplier-registration','FrontendController@supplierForm')->name('supplier.reg');
+Route::get('/manufacturer-registration','FrontendController@manufacturerForm')->name('manufacturer.reg');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
