@@ -13,7 +13,15 @@ class Buyer extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('buyer', function (Blueprint $table) {
+            $table->id();
+            $table->integer('user_id')->unsigned();
+            $table->string('unique_id');
+            $table->string('mobile')->unique();
+            $table->string('country');
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
