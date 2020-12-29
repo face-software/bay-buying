@@ -27,24 +27,35 @@
 							<div class="sign_in_sec current" id="tab-1">
 								
 								<h3>Sign in As Buyer</h3>
-								<form>
+								<form method="post" action="{{ route('login') }}">
+									@csrf
 									<div class="row">
 										<div class="col-lg-12 no-pdd">
 											<div class="sn-field">
-												<input type="text" name="username" placeholder="Username">
+												<input id="email" type="email" name="email" placeholder="Email Address"  class="form-control @error('email') is-invalid @enderror" autocomplete="email" autofocus>
 												<i class="la la-user"></i>
 											</div><!--sn-field end-->
+											 @error('email')
+			                                    <span class="invalid-feedback" role="alert">
+			                                        <strong>{{ $message }}</strong>
+			                                    </span>
+			                                @enderror
 										</div>
 										<div class="col-lg-12 no-pdd">
 											<div class="sn-field">
-												<input type="password" name="password" placeholder="Password">
+												<input type="password" name="password" placeholder="Password"  class="form-control @error('password') is-invalid @enderror" autocomplete="password" autofocus>
 												<i class="la la-lock"></i>
 											</div>
+											@error('password')
+		                                    	<span class="invalid-feedback" role="alert">
+		                                        	<strong>{{ $message }}</strong>
+		                                    	</span>
+	                                		@enderror
 										</div>
 										<div class="col-lg-12 no-pdd">
 											<div class="checky-sec">
 											<!-- 	<div class="fgt-sec">
-													<input type="checkbox" name="cc" id="c1">
+													<input type="checkbox" name="cc" id="c1" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 													<label for="c1">
 														<span></span>
 													</label>
@@ -72,11 +83,11 @@
 							<div class="sign_in_sec" id="tab-2">
 								
 								<h3>Sign in As Supplier</h3>
-								<form>
+								<form method="post" action="{{ route('login') }}">
 									<div class="row">
 										<div class="col-lg-12 no-pdd">
 											<div class="sn-field">
-												<input type="text" name="username" placeholder="Username">
+												<input type="text" name="email" placeholder="Email Address.." class="@error('email') is-invalid @enderror">
 												<i class="la la-user"></i>
 											</div><!--sn-field end-->
 										</div>
@@ -88,13 +99,6 @@
 										</div>
 										<div class="col-lg-12 no-pdd">
 											<div class="checky-sec">
-											<!-- 	<div class="fgt-sec">
-													<input type="checkbox" name="cc" id="c1">
-													<label for="c1">
-														<span></span>
-													</label>
-													<small>Remember me</small>
-												</div> --><!--fgt-sec end-->
 												<a href="#" title="">Forgot Password?</a>
 											</div>
 										</div>
