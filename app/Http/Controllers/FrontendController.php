@@ -15,7 +15,7 @@ class FrontendController extends Controller
     */
 	public function buyerForm()
 	{
-		return view('backend.pages.auth.buyerForm');
+		return view('backend.pages.auth.buyerForm'); 
 	}
 	/*
 		@Buying House Registration show form

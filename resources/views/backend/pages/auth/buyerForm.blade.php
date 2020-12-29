@@ -22,38 +22,62 @@
 								</ul>			
 								<div class="sign_in_sec current" id="tab-1">
 									<div class="dff-tab current" id="tab-3">
-										<form>
+										<form action="{{route('add.buyer')}}" method="post">
+											@csrf
 											<div class="row">
 												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="name" placeholder="First Name">
+													 @if ($errors->has('first_name'))
+                    										<span class="text-danger" style="font-size: 12px;">{{ $errors->first('first_name') }}</span>
+               												 @endif
+													<div class="sn-field mt-1">
+														<input type="text" name="first_name" placeholder="First Name" class=" form-control @error('first_name') is-invalid @enderror" value="{{old('first_name')}}">
 														<i class="la la-user"></i>
 													</div>
+													  
 												</div>
 												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="name" placeholder="Last Name">
+														 @if ($errors->has('last_name'))
+                    										<span class="text-danger" style="font-size: 12px;">{{ $errors->first('last_name') }}</span>
+               												 @endif
+													<div class="sn-field mt-1">
+														<input type="text" name="last_name" placeholder="Last Name" class="form-control @error('last_name') is-invalid @enderror" value="{{old('last_name')}}">
 														<i class="la la-user"></i>
 													</div>
+												
 												</div>
 												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="name" placeholder="Email">
+													 @if ($errors->has('email'))
+                    										<span class="text-danger" style="font-size: 12px;">{{ $errors->first('email') }}</span>
+               												 @endif
+													<div class="sn-field mt-1">
+														<input type="text" name="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" value="{{old('email')}}">
 														<i class="fa fa-envelope"></i>
+														
 													</div>
+													
 												</div>
 												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="name" placeholder="Address">
+													@if ($errors->has('address'))
+                    										<span class="text-danger" style="font-size: 12px;">{{ $errors->first('address') }}</span>
+               												 @endif
+													<div class="sn-field mt-1">
+														<input type="text" name="address" placeholder="Address" class="form-control @error('address') is-invalid @enderror" value="{{old('address')}}">
 														<i class="fa fa-map-marker"></i>
+														
 													</div>
+													 
 												</div>
 
 												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="country" placeholder="Country">
+													 @if ($errors->has('country'))
+                    										<span class="text-danger" style="font-size: 12px;">{{ $errors->first('country') }}</span>
+               												 @endif
+													<div class="sn-field mt-1">
+														<input type="text" name="country" placeholder="Country" class="form-control @error('country') is-invalid @enderror" value="{{old('country')}}">
 														<i class="la la-globe"></i>
+														
 													</div>
+													
 												</div>
 											<!-- 	<div class="col-lg-12 no-pdd">
 													<div class="sn-field">
@@ -69,22 +93,37 @@
 													</div>
 												</div> -->
 												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="country" placeholder="Phone">
+														@if ($errors->has('mobile'))
+                    										<span class="text-danger" style="font-size: 12px;">{{ $errors->first('mobile') }}</span>
+               												 @endif
+													<div class="sn-field mt-1">
+														<input type="text" name="mobile" placeholder="Phone" class="form-control @error('mobile') is-invalid @enderror" value="{{old('mobile')}}">
 														<i class="fa fa-mobile"></i>
+														 
 													</div>
+												
 												</div>
 												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="password" name="password" placeholder="Password">
+													 @if ($errors->has('password'))
+                    										<span class="text-danger" style="font-size: 12px;">{{ $errors->first('password') }}</span>
+               												 @endif
+													<div class="sn-field mt-1">
+														<input type="password" name="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" value="{{old('password')}}">
 														<i class="la la-lock"></i>
+														
 													</div>
+													
 												</div>
 												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="password" name="repeat-password" placeholder="Repeat Password">
+													 @if ($errors->has('confirm_password'))
+                    										<span class="text-danger" style="font-size: 12px;">{{ $errors->first('confirm_password') }}</span>
+               												 @endif
+													<div class="sn-field mt-1">
+														<input type="password" name="confirm_password" placeholder="Confirm Password" class="form-control @error('confirm_password') is-invalid @enderror" value="{{old('confirm_password')}}">
 														<i class="la la-lock"></i>
+														
 													</div>
+													
 												</div>
 												<div class="col-lg-12 no-pdd">
 													<div class="checky-sec st2">
