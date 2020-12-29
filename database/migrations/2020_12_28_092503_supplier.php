@@ -13,7 +13,7 @@ class Supplier extends Migration
      */
     public function up()
     {
-        Schema::create('supplier', function (Blueprint $table) {
+        Schema::create('suppliers', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id')->unsigned();
             $table->string('unique_id');

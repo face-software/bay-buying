@@ -13,7 +13,7 @@ class Buyer extends Migration
      */
     public function up()
     {
-        Schema::create('buyer', function (Blueprint $table) {
+        Schema::create('buyers', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id')->unsigned();
             $table->string('unique_id');

@@ -13,7 +13,7 @@ class Manufacturer extends Migration
      */
     public function up()
     {
-        Schema::create('manufacturer', function (Blueprint $table) {
+        Schema::create('manufacturers', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id')->unsigned();
             $table->string('unique_id');
