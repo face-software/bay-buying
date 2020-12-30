@@ -29,7 +29,7 @@ Route::post('add-manufacturer','RegistrationController@add_manufacturer')->name(
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/feed', 'HomeController@index')->name('feed');
 Route::resource('/roles', 'Backend\RolesController');
 Route::resource('/users', 'Backend\UserController');
 
