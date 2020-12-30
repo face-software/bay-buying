@@ -26,6 +26,8 @@ Route::post('add-buyer','RegistrationController@add_buyer')->name('add.buyer');
 Route::post('add-buying-house','RegistrationController@add_buying_house')->name('add.buying.house');
 Route::post('add-supplier','RegistrationController@add_supplier')->name('add.supplier');
 Route::post('add-manufacturer','RegistrationController@add_manufacturer')->name('add.manufacturer');
+Route::get('/forgot-password','Auth\ForgotPasswordController@forgot_password')->name('forgot.password');
+
 Auth::routes();
 
 
