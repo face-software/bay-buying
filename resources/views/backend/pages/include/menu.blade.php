@@ -4,6 +4,7 @@
 			<div class="logo">
 				<a href="{{url('/')}}" title=""><img src="{{asset('assets')}}/images/logo.png" alt=""></a>
 			</div>
+			@if(empty(Auth::user()->id))	
 				<div class="user-account">
 				<div class="user-login">
 					<a href="{{route('login')}}" title=""><i class="fa fa-sign-in" aria-hidden="true">  Sign In </i></a>					
@@ -26,6 +27,13 @@
 					</ul>
 				</div><!--user-account-settingss end-->
 			</div>
+			@else
+			<div class="user-account">
+				<div class="user-login">
+					<a href="{{url('/home')}}" title=""><i class="fa fa-user" aria-hidden="true"> My Account</i></a>					
+				</div>
+			</div>
+				@endif
 		</div><!--header-data end-->
 	</div>
 </header><!--header end-->

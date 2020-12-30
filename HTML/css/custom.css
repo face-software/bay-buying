@@ -1,0 +1,27 @@
+.user-login {
+	float: left;
+	width: 100%;
+	padding: 13px 10px;
+	position: relative;
+}
+.user-login a {
+	color: #fff;
+	font-size: 14px;
+	float: left;
+	margin-top: 8px;
+}
+.user-login a:hover {
+	color: #fff;
+}
+.user-login > i {
+	position: absolute;
+	top: 51%;
+	right: 10px;
+	color: #fff;
+	font-size: 12px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
