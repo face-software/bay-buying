@@ -159,7 +159,7 @@
 					<div class="user-account">
 						<div class="user-info">
 							<img src="{{asset('assets')}}/images/resources/user.png" alt="">
-							<a href="#" title="">John</a>
+							<a href="#" title="">{{Auth::user()->first_name}}</a>
 							<i class="la la-sort-down"></i>
 						</div>
 						<div class="user-account-settingss" id="users">
@@ -198,7 +198,13 @@
 								<li><a href="#" title="">Faqs</a></li>
 								<li><a href="#" title="">Terms & Conditions</a></li>
 							</ul>
-							<h3 class="tc"><a href="sign-in.html" title="">Logout</a></h3>
+							<h3 class="tc"><a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();" title="">Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                                </form>
+                            </h3>
 						</div><!--user-account-settingss end-->
 					</div>
 				</div><!--header-data end-->

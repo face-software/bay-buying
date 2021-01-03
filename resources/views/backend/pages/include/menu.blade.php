@@ -30,7 +30,7 @@
 			@else
 			<div class="user-account">
 				<div class="user-login">
-					<a href="{{url('/home')}}" title=""><i class="fa fa-user" aria-hidden="true"> My Account</i></a>					
+					<a href="{{url('/feed')}}" title=""><i class="fa fa-user" aria-hidden="true"> My Account</i></a>					
 				</div>
 			</div>
 				@endif
