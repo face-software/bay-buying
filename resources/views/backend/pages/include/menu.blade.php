@@ -30,7 +30,10 @@
 			@else
 			<div class="user-account">
 				<div class="user-login">
-					<a href="{{url('/home')}}" title=""><i class="fa fa-user" aria-hidden="true"> My Account</i></a>					
+					<a href="{{url('/home')}}" title=""><i class="fa fa-user" aria-hidden="true"> My Account</i></a>
+				<!-- 	<a href="{{url('/profile')}}" title=""><i class="fa fa-user" aria-hidden="true"> My Profile</i></a> -->
+
+
 				</div>
 			</div>
 				@endif

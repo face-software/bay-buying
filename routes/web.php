@@ -32,6 +32,7 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'BuyerPostController@buyerProfile');
 Route::resource('/roles', 'Backend\RolesController');
 Route::resource('/users', 'Backend\UserController');
 

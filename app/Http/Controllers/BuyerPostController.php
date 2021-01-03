@@ -82,4 +82,7 @@ class BuyerPostController extends Controller
     {
         //
     }
+    public function buyerProfile(){
+        return view('buyer-profile-feed');
+    }
 }
