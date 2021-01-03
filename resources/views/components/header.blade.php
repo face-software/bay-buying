@@ -3,7 +3,7 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="index.html" title=""><img src="{{asset('assets')}}/images/logo.png" alt=""></a>
+						<a href="index.html" title=""><img src="{{asset('assets/images')}}/logo.png" alt=""></a>
 					</div><!--logo end-->
 					<div class="search-bar">
 						<form>
@@ -15,7 +15,7 @@
 						<ul>
 							<li>
 								<a href="index.html" title="">
-									<span><img src="images/icon1.png" alt=""></span>
+									<span><img src="{{asset('assets/images')}}/icon1.png" alt=""></span>
 									Home
 								</a>
 							</li>
