@@ -35,7 +35,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile', 'BuyerPostController@buyerProfile');
 Route::resource('/roles', 'Backend\RolesController');
 Route::resource('/users', 'Backend\UserController');
-
+Route::post('add.buyer.post','BuyerPostController@store')->name('add.buyer.post');
 
 Route::get('user/login','Backend\Auth\LoginController@showLoginForm')->name('user.login');
 Route::prefix('feed')->group(base_path('routes/user.php'));

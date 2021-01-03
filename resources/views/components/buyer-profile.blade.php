@@ -1,238 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>WorkWise Html Template</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
-	<link rel="stylesheet" type="text/css" href="css/line-awesome.css">
-	<link rel="stylesheet" type="text/css" href="css/line-awesome-font-awesome.min.css">
-	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-</head>
- 
-
-<body>
-	
-
+<div>
+    @extends('backend.pages.master')
+@section('content')
 	<div class="wrapper">
-		<header>
-			<div class="container">
-				<div class="header-data">
-					<div class="logo">
-						<a href="index.html" title=""><img src="images/logo.png" alt=""></a>
-					</div><!--logo end-->
-					<div class="search-bar">
-						<form>
-							<input type="text" name="search" placeholder="Search...">
-							<button type="submit"><i class="la la-search"></i></button>
-						</form>
-					</div><!--search-bar end-->
-					<nav>
-						<ul>
-							<li>
-								<a href="index.html" title="">
-									<span><img src="images/icon1.png" alt=""></span>
-									Home
-								</a>
-							</li>
-							<li>
-								<a href="companies.html" title="">
-									<span><img src="images/icon2.png" alt=""></span>
-									Companies
-								</a>
-								<ul>
-									<li><a href="companies.html" title="">Companies</a></li>
-									<li><a href="company-profile.html" title="">Company Profile</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="projects.html" title="">
-									<span><img src="images/icon3.png" alt=""></span>
-									Projects
-								</a>
-							</li>
-							<li>
-								<a href="profiles.html" title="">
-									<span><img src="images/icon4.png" alt=""></span>
-									Profiles
-								</a>
-								<ul>
-									<li><a href="user-profile.html" title="">User Profile</a></li>
-									<li><a href="my-profile-feed.html" title="">my-profile-feed</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="jobs.html" title="">
-									<span><img src="images/icon5.png" alt=""></span>
-									Jobs
-								</a>
-							</li>
-							<li>
-								<a href="#" title="" class="not-box-openm">
-									<span><img src="images/icon6.png" alt=""></span>
-									Messages
-								</a>
-								<div class="notification-box msg" id="message">
-									<div class="nt-title">
-										<h4>Setting</h4>
-										<a href="#" title="">Clear all</a>
-									</div>
-									<div class="nott-list">
-										<div class="notfication-details">
-							  				<div class="noty-user-img">
-							  					<img src="images/resources/ny-img1.png" alt="">
-							  				</div>
-							  				<div class="notification-info">
-							  					<h3><a href="messages.html" title="">Jassica William</a> </h3>
-							  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
-							  					<span>2 min ago</span>
-							  				</div><!--notification-info -->
-						  				</div>
-						  				<div class="notfication-details">
-							  				<div class="noty-user-img">
-							  					<img src="images/resources/ny-img2.png" alt="">
-							  				</div>
-							  				<div class="notification-info">
-							  					<h3><a href="messages.html" title="">Jassica William</a></h3>
-							  					<p>Lorem ipsum dolor sit amet.</p>
-							  					<span>2 min ago</span>
-							  				</div><!--notification-info -->
-						  				</div>
-						  				<div class="notfication-details">
-							  				<div class="noty-user-img">
-							  					<img src="images/resources/ny-img3.png" alt="">
-							  				</div>
-							  				<div class="notification-info">
-							  					<h3><a href="messages.html" title="">Jassica William</a></h3>
-							  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua.</p>
-							  					<span>2 min ago</span>
-							  				</div><!--notification-info -->
-						  				</div>
-						  				<div class="view-all-nots">
-						  					<a href="messages.html" title="">View All Messsages</a>
-						  				</div>
-									</div><!--nott-list end-->
-								</div><!--notification-box end-->
-							</li>
-							<li>
-								<a href="#" title="" class="not-box-open">
-									<span><img src="images/icon7.png" alt=""></span>
-									Notification
-								</a>
-								<div class="notification-box noti" id="notification">
-									<div class="nt-title">
-										<h4>Setting</h4>
-										<a href="#" title="">Clear all</a>
-									</div>
-									<div class="nott-list">
-										<div class="notfication-details">
-							  				<div class="noty-user-img">
-							  					<img src="images/resources/ny-img1.png" alt="">
-							  				</div>
-							  				<div class="notification-info">
-							  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
-							  					<span>2 min ago</span>
-							  				</div><!--notification-info -->
-						  				</div>
-						  				<div class="notfication-details">
-							  				<div class="noty-user-img">
-							  					<img src="images/resources/ny-img2.png" alt="">
-							  				</div>
-							  				<div class="notification-info">
-							  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
-							  					<span>2 min ago</span>
-							  				</div><!--notification-info -->
-						  				</div>
-						  				<div class="notfication-details">
-							  				<div class="noty-user-img">
-							  					<img src="images/resources/ny-img3.png" alt="">
-							  				</div>
-							  				<div class="notification-info">
-							  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
-							  					<span>2 min ago</span>
-							  				</div><!--notification-info -->
-						  				</div>
-						  				<div class="notfication-details">
-							  				<div class="noty-user-img">
-							  					<img src="images/resources/ny-img2.png" alt="">
-							  				</div>
-							  				<div class="notification-info">
-							  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
-							  					<span>2 min ago</span>
-							  				</div><!--notification-info -->
-						  				</div>
-						  				<div class="view-all-nots">
-						  					<a href="#" title="">View All Notification</a>
-						  				</div>
-									</div><!--nott-list end-->
-								</div><!--notification-box end-->
-							</li>
-						</ul>
-					</nav><!--nav end-->
-					<div class="menu-btn">
-						<a href="#" title=""><i class="fa fa-bars"></i></a>
-					</div><!--menu-btn end-->
-					<div class="user-account">
-						<div class="user-info">
-							<img src="images/resources/user.png" alt="">
-							<a href="#" title="">John</a>
-							<i class="la la-sort-down"></i>
-						</div>
-						<div class="user-account-settingss">
-							<h3>Online Status</h3>
-							<ul class="on-off-status">
-								<li>
-									<div class="fgt-sec">
-										<input type="radio" name="cc" id="c5">
-										<label for="c5">
-											<span></span>
-										</label>
-										<small>Online</small>
-									</div>
-								</li>
-								<li>
-									<div class="fgt-sec">
-										<input type="radio" name="cc" id="c6">
-										<label for="c6">
-											<span></span>
-										</label>
-										<small>Offline</small>
-									</div>
-								</li>
-							</ul>
-							<h3>Custom Status</h3>
-							<div class="search_form">
-								<form>
-									<input type="text" name="search">
-									<button type="submit">Ok</button>
-								</form>
-							</div><!--search_form end-->
-							<h3>Setting</h3>
-							<ul class="us-links">
-								<li><a href="profile-account-setting.html" title="">Account Setting</a></li>
-								<li><a href="#" title="">Privacy</a></li>
-								<li><a href="#" title="">Faqs</a></li>
-								<li><a href="#" title="">Terms & Conditions</a></li>
-							</ul>
-							<h3 class="tc"><a href="sign-in.html" title="">Logout</a></h3>
-						</div><!--user-account-settingss end-->
-					</div>
-				</div><!--header-data end-->
-			</div>
-		</header><!--header end-->		
-
-
 		<section class="cover-sec">
-			<img src="images/resources/cover-img.jpg" alt="">
+			<img src="{{asset('assets/images')}}/resources/cover-img.jpg" alt="">
 			<div class="add-pic-box">
 				<div class="container">
 					<div class="row no-gutters">
@@ -255,7 +26,7 @@
 								<div class="main-left-sidebar">
 									<div class="user_profile">
 										<div class="user-pro-img">
-											<img src="images/resources/user-pro-img.png" alt="">
+											<img src="{{asset('assets/images')}}/resources/user-pro-img.png" alt="">
 											<div class="add-dp" id="OpenImgUpload">
 												<input type="file" id="file">
 												<label for="file"><i class="fas fa-camera"></i></label>												
@@ -291,7 +62,7 @@
 										</div><!--sd-title end-->
 										<div class="suggestions-list">
 											<div class="suggestion-usd">
-												<img src="images/resources/s1.png" alt="">
+												<img src="{{asset('assets/images')}}/resources/s1.png" alt="">
 												<div class="sgt-text">
 													<h4>Jessica William</h4>
 													<span>Graphic Designer</span>
@@ -299,7 +70,7 @@
 												<span><i class="la la-plus"></i></span>
 											</div>
 											<div class="suggestion-usd">
-												<img src="images/resources/s2.png" alt="">
+												<img src="{{asset('assets/images')}}/resources/s2.png" alt="">
 												<div class="sgt-text">
 													<h4>John Doe</h4>
 													<span>PHP Developer</span>
@@ -307,7 +78,7 @@
 												<span><i class="la la-plus"></i></span>
 											</div>
 											<div class="suggestion-usd">
-												<img src="images/resources/s3.png" alt="">
+												<img src="{{asset('assets/images')}}/resources/s3.png" alt="">
 												<div class="sgt-text">
 													<h4>Poonam</h4>
 													<span>Wordpress Developer</span>
@@ -315,7 +86,7 @@
 												<span><i class="la la-plus"></i></span>
 											</div>
 											<div class="suggestion-usd">
-												<img src="images/resources/s4.png" alt="">
+												<img src="{{asset('assets/images')}}/resources/s4.png" alt="">
 												<div class="sgt-text">
 													<h4>Bill Gates</h4>
 													<span>C & C++ Developer</span>
@@ -323,7 +94,7 @@
 												<span><i class="la la-plus"></i></span>
 											</div>
 											<div class="suggestion-usd">
-												<img src="images/resources/s5.png" alt="">
+												<img src="{{asset('assets/images')}}/resources/s5.png" alt="">
 												<div class="sgt-text">
 													<h4>Jessica William</h4>
 													<span>Graphic Designer</span>
@@ -331,7 +102,7 @@
 												<span><i class="la la-plus"></i></span>
 											</div>
 											<div class="suggestion-usd">
-												<img src="images/resources/s6.png" alt="">
+												<img src="{{asset('assets/images')}}/resources/s6.png" alt="">
 												<div class="sgt-text">
 													<h4>John Doe</h4>
 													<span>PHP Developer</span>
@@ -364,43 +135,43 @@
 											<ul>
 												<li data-tab="feed-dd" class="active">
 													<a href="#" title="">
-														<img src="images/ic1.png" alt="">
+														<img src="{{asset('assets/images')}}/ic1.png" alt="">
 														<span>Feed</span>
 													</a>
 												</li>
 												<li data-tab="info-dd">
 													<a href="#" title="">
-														<img src="images/ic2.png" alt="">
+														<img src="{{asset('assets/images')}}/ic2.png" alt="">
 														<span>Info</span>
 													</a>
 												</li>
 												<li data-tab="saved-jobs">
 													<a href="#" title="">
-														<img src="images/ic4.png" alt="">
+														<img src="{{asset('assets/images')}}/ic4.png" alt="">
 														<span>Jobs</span>
 													</a>
 												</li>
 												<li data-tab="my-bids">
 													<a href="#" title="">
-														<img src="images/ic5.png" alt="">
+														<img src="{{asset('assets/images')}}/ic5.png" alt="">
 														<span>Bids</span>
 													</a>
 												</li>
 												<li data-tab="portfolio-dd">
 													<a href="#" title="">
-														<img src="images/ic3.png" alt="">
+														<img src="{{asset('assets/images')}}/ic3.png" alt="">
 														<span>Portfolio</span>
 													</a>
 												</li>
 												<li data-tab="rewivewdata">
 													<a href="#" title="">
-														<img src="images/review.png" alt="">
+														<img src="{{asset('assets/images')}}/review.png" alt="">
 														<span>Reviews</span>
 													</a>
 												</li>
 												<li data-tab="payment-dd">
 													<a href="#" title="">
-														<img src="images/ic6.png" alt="">
+														<img src="{{asset('assets/images')}}/ic6.png" alt="">
 														<span>Payment</span>
 													</a>
 												</li>
@@ -410,7 +181,7 @@
 									</div>
 										<div class="post-topbar">
 										<!-- <div class="user-picy">
-											<img src="images/resources/user-pic.png" alt="">
+											<img src="{{asset('assets/images')}}/resources/user-pic.png" alt="">
 										</div> -->
 										<div class="post-st">
 											<ul>
@@ -423,34 +194,34 @@
 			<div class="post-project">
 				<h3>Post a project</h3>
 				<div class="post-project-fields">
-					<form>
+					<form action="{{route('add.buyer.post')}}" method="post">
+						@csrf
 						<div class="row">
-							<div class="col-lg-12">
+							<!-- <div class="col-lg-12">
 								<input type="text" name="title" placeholder="Title">
-							</div>
+							</div> -->
 							<div class="col-lg-12">
 								<div class="inp-field">
-									<select>
-										<option>Item</option>
-										<option>Category 1</option>
-										<option>Category 2</option>
-										<option>Category 3</option>
+									<select name="category_id">
+										@foreach($category as $cat)
+										<option value="{{$cat->id}}">{{$cat->category_name}}</option>
+										@endforeach
 									</select>
 								</div>
 		
 							</div>
 							<div class="col-lg-12">
-								<input type="text" name="skills" placeholder="Quantity">
+								<input type="text" name="quantity" placeholder="Quantity">
 							</div>
 							<div class="col-lg-12">
 								<div class="price-sec">
 									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
+										<input type="text" name="target_price_from" placeholder="Price">
 										<i class="la la-dollar"></i>
 									</div>
 									<span>To</span>
 									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
+										<input type="text" name="target_price_to" placeholder="Price">
 										<i class="la la-dollar"></i>
 									</div>
 								</div>
@@ -458,21 +229,24 @@
 								<div class="col-lg-12">
 								<div class="price-sec">
 									<div class="price-br">
-										<input type="text" name="price1" placeholder="Date">
+										<input type="date" name="target_date_from" placeholder="Date">
 										<i class="fa fa-calendar"></i>
 									</div>
 									<span>To</span>
 									<div class="price-br">
-										<input type="text" name="price1" placeholder="Date">
+										<input type="date" name="target_date_to" placeholder="Date">
 										<i class="fa fa-calendar"></i>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-12">
-								<textarea name="description" placeholder="Specification"></textarea>
+								<input type="text" name="depriciation" placeholder="Depriciation">
 							</div>
 							<div class="col-lg-12">
-								<input type="file" name="skills" placeholder="Images">
+								<textarea name="specification" placeholder="Specification"></textarea>
+							</div>
+							<div class="col-lg-12">
+								<input type="file" name="image" placeholder="{{asset('assets/images')}}">
 							</div>
 							<div class="col-lg-12">
 								<ul>
@@ -877,13 +651,13 @@
                                                 <div class="post-bar">
                                                     <div class="post_topbar applied-post">
                                                         <div class="usy-dt">
-                                                            <img src="images/resources/us-pic.png" alt="">
+                                                            <img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
                                                             <div class="usy-name">
                                                                 <h3>John Doe</h3>
                                                                 <div class="epi-sec epi2">
                                                                     <ul class="descp descptab bklink">
-                                                                        <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-                                                                        <li><img src="images/icon9.png" alt=""><span>India</span></li>
+                                                                        <li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+                                                                        <li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -923,13 +697,13 @@
                                                 <div class="post-bar">
                                                     <div class="post_topbar  applied-post">
                                                         <div class="usy-dt">
-                                                            <img src="images/resources/us-pic.png" alt="">
+                                                            <img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
                                                             <div class="usy-name">
                                                                 <h3>John Doe</h3>
                                                                 <div class="epi-sec epi2">
                                                                     <ul class="descp descptab bklink">
-                                                                        <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-                                                                        <li><img src="images/icon9.png" alt=""><span>India</span></li>
+                                                                        <li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+                                                                        <li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -969,13 +743,13 @@
                                                 <div class="post-bar">
                                                     <div class="post_topbar applied-post">
                                                         <div class="usy-dt">
-                                                            <img src="images/resources/us-pic.png" alt="">
+                                                            <img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
                                                             <div class="usy-name">
                                                                 <h3>John Doe</h3>
                                                                 <div class="epi-sec epi2">
                                                                     <ul class="descp descptab bklink">
-                                                                        <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-                                                                        <li><img src="images/icon9.png" alt=""><span>India</span></li>
+                                                                        <li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+                                                                        <li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -1020,10 +794,10 @@
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="{{asset('assets/images')}}/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -1039,8 +813,8 @@
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 													<ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -1066,7 +840,7 @@
 													<ul class="like-com">
 														<li>
 															<a href="#"><i class="fas fa-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
+															<img src="{{asset('assets/images')}}/liked-img.png" alt="">
 															<span>25</span>
 														</li> 
 														<li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comment 15</a></li>
@@ -1077,10 +851,10 @@
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="{{asset('assets/images')}}/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -1096,8 +870,8 @@
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Front End Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Front End Developer</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 													<ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -1123,7 +897,7 @@
 													<ul class="like-com">
 														<li>
 															<a href="#"><i class="fas fa-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
+															<img src="{{asset('assets/images')}}/liked-img.png" alt="">
 															<span>25</span>
 														</li> 
 														<li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comment 15</a></li>
@@ -1134,10 +908,10 @@
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pc2.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/us-pc2.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="{{asset('assets/images')}}/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -1153,8 +927,8 @@
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 													<ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -1180,7 +954,7 @@
 													<ul class="like-com">
 														<li>
 															<a href="#"><i class="fas fa-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
+															<img src="{{asset('assets/images')}}/liked-img.png" alt="">
 															<span>25</span>
 														</li> 
 														<li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comment 15</a></li>
@@ -1191,10 +965,10 @@
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="{{asset('assets/images')}}/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -1210,8 +984,8 @@
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 													<ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -1237,7 +1011,7 @@
 													<ul class="like-com">
 														<li>
 															<a href="#"><i class="fas fa-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
+															<img src="{{asset('assets/images')}}/liked-img.png" alt="">
 															<span>25</span>
 														</li> 
 														<li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comment 15</a></li>
@@ -1614,13 +1388,13 @@
                                            	<div class="post-bar">
 												<div class="post_topbar post-bid">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
 														<div class="usy-name">
 														<h3>John Doe</h3>
 														<div class="epi-sec epi2">
 													     <ul class="descp descptab bklink">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													    </ul>
 												        </div>
 														</div>
@@ -1670,13 +1444,13 @@
 											<div class="post-bar">
 												<div class="post_topbar post-bid">
 													<div class="usy-dt">
-														<img src="images/resources/Jassica.jpg" alt="">
+														<img src="{{asset('assets/images')}}/resources/Jassica.jpg" alt="">
 														<div class="usy-name">
 														<h3>John Doe</h3>
 														<div class="epi-sec epi2">
 													     <ul class="descp descptab bklink">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													    </ul>
 												        </div>
 														</div>
@@ -1726,13 +1500,13 @@
 											<div class="post-bar">
 												<div class="post_topbar post-bid">
 													<div class="usy-dt">
-														<img src="images/resources/rock.jpg" alt="">
+														<img src="{{asset('assets/images')}}/resources/rock.jpg" alt="">
 														<div class="usy-name">
 														<h3>John Doe</h3>
 														<div class="epi-sec epi2">
 													     <ul class="descp descptab bklink">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													    </ul>
 												        </div>
 														</div>
@@ -1834,13 +1608,13 @@
 											<div class="post-bar ">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/bg-img3.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/bg-img3.png" alt="">
 														<div class="usy-name">
 															<h3>Rock William</h3>
 															<div class="epi-sec epi2">
 													<ul class="descp review-lt">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 												</div>
 														</div>
@@ -1865,7 +1639,7 @@
 
 										<div class="post_topbar post-reply">
 													<div class="usy-dt">
-														<img src="images/resources/bg-img4.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/bg-img4.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
 															<div class="epi-sec epi2">
@@ -1878,7 +1652,7 @@
 												<div class="post_topbar rep-post rep-thanks">
 													<hr>
 													<div class="usy-dt">
-														<img src="images/resources/bg-img4.png" alt="">														
+														<img src="{{asset('assets/images')}}/resources/bg-img4.png" alt="">														
 														<input class="reply" type="text" placeholder="Reply">
 														<a class="replybtn" href="#">Send</a>
 											   
@@ -1890,13 +1664,13 @@
 											<div class="post-bar post-thanks">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/bg-img1.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/bg-img1.png" alt="">
 														<div class="usy-name">
 															<h3>Jassica William</h3>
 															<div class="epi-sec epi2">
 													<ul class="descp review-lt">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Epic Coder</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 												</div>
 														</div>
@@ -1928,7 +1702,7 @@
 										</div>
 										<div class="post_topbar rep-post">
 													<div class="usy-dt">
-														<img src="images/resources/bg-img4.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/bg-img4.png" alt="">
 														
 															<input class="reply" type="text" placeholder="Reply">
 															<a class="replybtn" href="#">Send</a>
@@ -1944,10 +1718,10 @@
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="{{asset('assets/images')}}/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -1963,8 +1737,8 @@
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Frontend Developer</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 													<ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -1993,10 +1767,10 @@
 													<ul class="like-com">
 														<li>
 															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
+															<img src="{{asset('assets/images')}}/liked-img.png" alt="">
 															<span>25</span>
 														</li> 
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
+														<li><a href="#" title="" class="com"><img src="{{asset('assets/images')}}/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
@@ -2004,10 +1778,10 @@
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="{{asset('assets/images')}}/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -2023,8 +1797,8 @@
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Frontend Developer</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 													<ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -2053,10 +1827,10 @@
 													<ul class="like-com">
 														<li>
 															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
+															<img src="{{asset('assets/images')}}/liked-img.png" alt="">
 															<span>25</span>
 														</li> 
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
+														<li><a href="#" title="" class="com"><img src="{{asset('assets/images')}}/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
@@ -2064,10 +1838,10 @@
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="{{asset('assets/images')}}/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -2083,8 +1857,8 @@
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Frontend Developer</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 													<ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -2113,10 +1887,10 @@
 													<ul class="like-com">
 														<li>
 															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
+															<img src="{{asset('assets/images')}}/liked-img.png" alt="">
 															<span>25</span>
 														</li> 
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
+														<li><a href="#" title="" class="com"><img src="{{asset('assets/images')}}/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
@@ -2124,10 +1898,10 @@
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="{{asset('assets/images')}}/resources/us-pic.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="{{asset('assets/images')}}/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -2143,8 +1917,8 @@
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li><img src="{{asset('assets/images')}}/icon8.png" alt=""><span>Frontend Developer</span></li>
+														<li><img src="{{asset('assets/images')}}/icon9.png" alt=""><span>India</span></li>
 													</ul>
 													<ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -2173,16 +1947,16 @@
 													<ul class="like-com">
 														<li>
 															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
+															<img src="{{asset('assets/images')}}/liked-img.png" alt="">
 															<span>25</span>
 														</li> 
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
+														<li><a href="#" title="" class="com"><img src="{{asset('assets/images')}}/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
 											</div><!--post-bar end-->
 											<div class="process-comm">
-												<a href="#" title=""><img src="images/process-icon.png" alt=""></a>
+												<a href="#" title=""><img src="{{asset('assets/images')}}/process-icon.png" alt=""></a>
 											</div><!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
@@ -2196,62 +1970,62 @@
 												<div class="row">
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img1.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img1.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img2.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img2.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img3.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img3.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img4.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img4.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img5.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img5.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img6.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img6.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img7.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img7.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img8.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img8.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img9.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img9.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 													<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 														<div class="gallery_pt">
-															<img src="images/resources/pf-img10.jpg" alt="">
-															<a href="#" title=""><img src="images/all-out.png" alt=""></a>
+															<img src="{{asset('assets/images')}}/resources/pf-img10.jpg" alt="">
+															<a href="#" title=""><img src="{{asset('assets/images')}}/all-out.png" alt=""></a>
 														</div><!--gallery_pt end-->
 													</div>
 												</div>
@@ -2275,14 +2049,14 @@
 												</li>
 											</ul>
 											<div class="lt-sec">
-												<img src="images/lt-icon.png" alt="">
+												<img src="{{asset('assets/images')}}/lt-icon.png" alt="">
 												<h4>All your transactions are saved here</h4>
 												<a href="#" title="">Click Here</a>
 											</div>
 										</div><!--billing-method end-->
 										<div class="add-billing-method">
 											<h3>Add Billing Method</h3>
-											<h4><img src="images/dlr-icon.png" alt=""><span>With workwise payment protection , only pay for work delivered.</span></h4>
+											<h4><img src="{{asset('assets/images')}}/dlr-icon.png" alt=""><span>With workwise payment protection , only pay for work delivered.</span></h4>
 											<div class="payment_methods">
 												<h4>Credit or Debit Cards</h4>
 												<form>
@@ -2291,10 +2065,10 @@
 															<div class="cc-head">
 																<h5>Card Number</h5>
 																<ul>
-																	<li><img src="images/cc-icon1.png" alt=""></li>
-																	<li><img src="images/cc-icon2.png" alt=""></li>
-																	<li><img src="images/cc-icon3.png" alt=""></li>
-																	<li><img src="images/cc-icon4.png" alt=""></li>
+																	<li><img src="{{asset('assets/images')}}/cc-icon1.png" alt=""></li>
+																	<li><img src="{{asset('assets/images')}}/cc-icon2.png" alt=""></li>
+																	<li><img src="{{asset('assets/images')}}/cc-icon3.png" alt=""></li>
+																	<li><img src="{{asset('assets/images')}}/cc-icon4.png" alt=""></li>
 																</ul>
 															</div>
 															<div class="inpt-field pd-moree">
@@ -2364,22 +2138,22 @@
 									<div class="widget widget-portfolio">
 										<div class="wd-heady">
 											<h3>Portfolio</h3>
-											<img src="images/photo-icon.png" alt="">
+											<img src="{{asset('assets/images')}}/photo-icon.png" alt="">
 										</div>
 										<div class="pf-gallery">
 											<ul>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery1.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery2.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery3.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery4.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery5.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery6.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery7.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery8.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery9.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery10.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery11.png" alt=""></a></li>
-												<li><a href="#" title=""><img src="images/resources/pf-gallery12.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery1.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery2.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery3.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery4.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery5.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery6.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery7.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery8.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery9.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery10.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery11.png" alt=""></a></li>
+												<li><a href="#" title=""><img src="{{asset('assets/images')}}/resources/pf-gallery12.png" alt=""></a></li>
 											</ul>
 										</div><!--pf-gallery end-->
 									</div><!--widget-portfolio end-->
@@ -2405,8 +2179,8 @@
 						<li><a href="#" title="">Language</a></li>
 						<li><a href="#" title="">Copyright Policy</a></li>
 					</ul>
-					<p><img src="images/copy-icon2.png" alt="">Copyright 2019</p>
-					<img class="fl-rgt" src="images/logo2.png" alt="">
+					<p><img src="{{asset('assets/images')}}/copy-icon2.png" alt="">Copyright 2019</p>
+					<img class="fl-rgt" src="{{asset('assets/images')}}/logo2.png" alt="">
 				</div>
 			</div>
 		</footer><!--footer end-->
@@ -2529,7 +2303,7 @@
 						<label for="file">Choose File</label>	
 					</div>
 					<div class="pf-img">
-						<img src="images/resources/np.png" alt="">
+						<img src="{{asset('assets/images')}}/resources/np.png" alt="">
 					</div>
 					<input type="text" name="website-url" placeholder="htp://www.example.com">
 					<button type="submit" class="save">Save</button>
@@ -2540,13 +2314,5 @@
 		</div><!--overview-box end-->
 
 	</div><!--theme-layout end-->
-
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/popper.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/flatpickr.min.js"></script>
-<script type="text/javascript" src="lib/slick/slick.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-</body>
-</html>
+@endsection()
+</div>

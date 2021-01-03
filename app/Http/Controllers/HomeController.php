@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Auth;
+use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     /**
@@ -19,10 +20,17 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return user post
      */
     public function index()
     {
-        return view('home');
+        return (Auth::user()->user_type==1)?$this->buyerUserProfile():$this->allUserProfile();
+    }
+    private function allUserProfile(){
+        return view('components.maincontent');
+    }
+     private function buyerUserProfile(){
+        $category = DB::table('categories')->get();
+        return view('components.buyer-profile',compact('category'));
     }
 }

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\buyer_post;
+use App\Buyer_post;
+use Auth;
+
 use Illuminate\Http\Request;
 
 class BuyerPostController extends Controller
@@ -35,7 +37,29 @@ class BuyerPostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+           $this->validate($request,[
+            'category_id'=>'required',
+            'specification'=>'required|max:500',
+            'quantity'=>'required',
+            'target_price_from'=>'required',
+            'target_price_to'=>'required',
+            'target_date_from'=>'required',
+            'target_date_to'=>'required',
+            'depriciation'=>'required',
+        ]);
+        $buyer_post= new Buyer_post();
+        $buyer_post->category_id= $request->category_id;
+        $buyer_post->specification= $request->specification;
+        $buyer_post->quantity= $request->quantity;
+        $buyer_post->target_date_from= $request->target_date_from;
+        $buyer_post->target_date_to= $request->target_date_to;
+        $buyer_post->target_price_from= $request->target_price_from;
+        $buyer_post->target_price_to= $request->target_price_to;
+        $buyer_post->depriciation= $request->depriciation;
+        $buyer_post->status= 1;
+        $buyer_post->user_id=Auth::user()->id;
+        $buyer_post->save();
+        return back();
     }
 
     /**

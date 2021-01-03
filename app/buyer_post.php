@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class buyer_post extends Model
+class Buyer_post extends Model
 {
     //
 }
