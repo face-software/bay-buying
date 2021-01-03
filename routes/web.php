@@ -31,7 +31,7 @@ Route::get('/forgot-password','Auth\ForgotPasswordController@forgot_password')->
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/feed', 'HomeController@index')->name('feed');
 Route::resource('/roles', 'Backend\RolesController');
 Route::resource('/users', 'Backend\UserController');
 

@@ -19,10 +19,10 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return user post
      */
     public function index()
     {
-        return view('home');
+        return view('backend.pages.master');
     }
 }
