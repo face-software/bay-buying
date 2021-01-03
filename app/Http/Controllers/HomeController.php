@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.pages.master');
+        return (Auth::user()->user_type==1)?$this->buyerUserProfile():$this->allUserProfile();
+    }
+    private function allUserProfile(){
+        return view('components.maincontent');
+    }
+     private function buyerUserProfile(){
+        return view('components.buyer-profile');
     }
 }
