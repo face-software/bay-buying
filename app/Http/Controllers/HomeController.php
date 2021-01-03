@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
 class HomeController extends Controller
 {
     /**
@@ -28,7 +29,8 @@ class HomeController extends Controller
     private function allUserProfile(){
         return view('components.maincontent');
     }
-     private function buyerUserProfile(){
-        return view('components.buyer-profile');
+    private function buyerUserProfile(){
+        $user= User::all();
+        return view('components.buyer-profile',compact('user'));
     }
 }
