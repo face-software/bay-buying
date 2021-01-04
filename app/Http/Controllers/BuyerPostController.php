@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Buyer_post;
+use App\MultipleImage;
 use Auth;
 
 use Illuminate\Http\Request;
@@ -37,17 +38,18 @@ class BuyerPostController extends Controller
      */
     public function store(Request $request)
     {
-           $this->validate($request,[
-            'category_id'=>'required',
-            'specification'=>'required|max:500',
-            'quantity'=>'required',
-            'target_price_from'=>'required',
-            'target_price_to'=>'required',
-            'target_date_from'=>'required',
-            'target_date_to'=>'required',
-            'depriciation'=>'required',
-        ]);
+        //    $this->validate($request,[
+        //     'category_id'=>'required',
+        //     'specification'=>'required|max:500',
+        //     'quantity'=>'required',
+        //     'target_price_from'=>'required',
+        //     'target_price_to'=>'required',
+        //     'target_date_from'=>'required',
+        //     'target_date_to'=>'required',
+        //     'depriciation'=>'required',
+        // ]);
         $buyer_post= new Buyer_post();
+        $multiple_image = new MultipleImage();
         $buyer_post->category_id= $request->category_id;
         $buyer_post->specification= $request->specification;
         $buyer_post->quantity= $request->quantity;
@@ -59,6 +61,23 @@ class BuyerPostController extends Controller
         $buyer_post->status= 1;
         $buyer_post->user_id=Auth::user()->id;
         $buyer_post->save();
+        $buyer_post->id;
+       
+        $image = $request->file('image');
+
+         $count=1;
+        foreach ($image as $img => $value) {
+         echo  $fileName = date('Ymd') .$value->getClientOriginalName();
+           $value->move(public_path('assets/demo'), $fileName);
+            $multiple_image->images= $fileName;
+            $multiple_image->buyer_posts_id= $buyer_post->id;
+            $count++;
+            $multiple_image->save();
+                  
+        }
+       
+        // print_r($image);
+        // exit();
         return back();
     }
 
