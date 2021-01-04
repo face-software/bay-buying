@@ -103,11 +103,11 @@
 			<div class="post-project">
 				<h3>Post a project</h3>
 				<div class="post-project-fields">
-					<form action="{{route('add.buyer.post')}}" method="post">
+					<form action="{{route('add.buyer.post')}}" method="post" enctype="multipart/form-data">
 						@csrf
 						<div class="row">
 							<!-- <div class="col-lg-12">
-								<input type="text" name="title" placeholder="Title">
+								<input type="hidden" name="title" placeholder="Title">
 							</div> -->
 							<div class="col-lg-12">
 								<div class="inp-field">
@@ -155,12 +155,12 @@
 								<textarea name="specification" placeholder="Specification"></textarea>
 							</div>
 							<div class="col-lg-12">
-								<input type="file" name="image" placeholder="{{asset('assets/images')}}">
+								<input type="file" name="image[]" placeholder="{{asset('assets/images')}}" multiple>
 							</div>
 							<div class="col-lg-12">
 								<ul>
 									<li><button class="active" type="submit" value="post">Post</button></li>
-									<li><a href="#" title="">Cancel</a></li>
+									<!-- <li><a href="#" title="">Cancel</a></li> -->
 								</ul>
 							</div>
 						</div>
