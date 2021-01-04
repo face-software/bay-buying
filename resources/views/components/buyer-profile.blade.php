@@ -103,34 +103,34 @@
 			<div class="post-project">
 				<h3>Post a project</h3>
 				<div class="post-project-fields">
-					<form>
+					<form action="{{route('add.buyer.post')}}" method="post">
+						@csrf
 						<div class="row">
-							<div class="col-lg-12">
+							<!-- <div class="col-lg-12">
 								<input type="text" name="title" placeholder="Title">
-							</div>
+							</div> -->
 							<div class="col-lg-12">
 								<div class="inp-field">
-									<select>
-										<option>Item</option>
-										<option>Category 1</option>
-										<option>Category 2</option>
-										<option>Category 3</option>
+									<select name="category_id">
+										@foreach($category as $cat)
+										<option value="{{$cat->id}}">{{$cat->category_name}}</option>
+										@endforeach
 									</select>
 								</div>
 		
 							</div>
 							<div class="col-lg-12">
-								<input type="text" name="skills" placeholder="Quantity">
+								<input type="text" name="quantity" placeholder="Quantity">
 							</div>
 							<div class="col-lg-12">
 								<div class="price-sec">
 									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
+										<input type="text" name="target_price_from" placeholder="Price">
 										<i class="la la-dollar"></i>
 									</div>
 									<span>To</span>
 									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
+										<input type="text" name="target_price_to" placeholder="Price">
 										<i class="la la-dollar"></i>
 									</div>
 								</div>
@@ -138,21 +138,24 @@
 								<div class="col-lg-12">
 								<div class="price-sec">
 									<div class="price-br">
-										<input type="text" name="price1" placeholder="Date">
+										<input type="date" name="target_date_from" placeholder="Date">
 										<i class="fa fa-calendar"></i>
 									</div>
 									<span>To</span>
 									<div class="price-br">
-										<input type="text" name="price1" placeholder="Date">
+										<input type="date" name="target_date_to" placeholder="Date">
 										<i class="fa fa-calendar"></i>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-12">
-								<textarea name="description" placeholder="Specification"></textarea>
+								<input type="text" name="depriciation" placeholder="Depriciation">
 							</div>
 							<div class="col-lg-12">
-								<input type="file" name="skills" placeholder="{{asset('assets/images')}}">
+								<textarea name="specification" placeholder="Specification"></textarea>
+							</div>
+							<div class="col-lg-12">
+								<input type="file" name="image" placeholder="{{asset('assets/images')}}">
 							</div>
 							<div class="col-lg-12">
 								<ul>

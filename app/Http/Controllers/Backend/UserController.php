@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Spatie\Permission\Models\Role;
 class UserController extends Controller
-{
+{ 
     public function index()
     {
         $users = User::all();

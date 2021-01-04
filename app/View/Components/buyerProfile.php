@@ -23,6 +23,7 @@ class buyerProfile extends Component
      */
     public function render()
     {
+      
         return view('components.buyer-profile');
     }
 }

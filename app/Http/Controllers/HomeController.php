@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     /**
@@ -31,6 +32,7 @@ class HomeController extends Controller
     }
     private function buyerUserProfile(){
         $user= User::all();
-        return view('components.buyer-profile',compact('user'));
+        $category = DB::table('categories')->get();
+        return view('components.buyer-profile',compact('user'), compact('category'));
     }
 }
