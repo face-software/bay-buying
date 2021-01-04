@@ -23,7 +23,7 @@ class buyerProfile extends Component
      */
     public function render()
     {
-        $category = DB::table('categories')->get();
+      
         return view('components.buyer-profile');
     }
 }
