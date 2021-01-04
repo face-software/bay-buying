@@ -60,24 +60,23 @@ class BuyerPostController extends Controller
         $buyer_post->depriciation= $request->depriciation;
         $buyer_post->status= 1;
         $buyer_post->user_id=Auth::user()->id;
+        if($request->hasfile('image'))
+        {
+
+            foreach($request->file('image') as $image)
+            {
+                $name=$image->getClientOriginalName();
+                $image->move(public_path().'/assets/demo/', $name);  
+                $data[] = $name;  
+            }
+        }
+        
+/*        $form= new MultipleImage();
+        $form->buyer_posts_id= 1;*/
+        $buyer_post->image=json_encode($data);
         $buyer_post->save();
         $buyer_post->id;
-       
-        $image = $request->file('image');
-
-         $count=1;
-        foreach ($image as $img => $value) {
-         echo  $fileName = date('Ymd') .$value->getClientOriginalName();
-           $value->move(public_path('assets/demo'), $fileName);
-            $multiple_image->images= $fileName;
-            $multiple_image->buyer_posts_id= $buyer_post->id;
-            $count++;
-            $multiple_image->save();
-                  
-        }
-       
-        // print_r($image);
-        // exit();
+        exit();
         return back();
     }
 
